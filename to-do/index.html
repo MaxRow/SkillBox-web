@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Список дел</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<main>
+		<article>
+			<h3>Список дел:</h3>
+			<ul>
+			<li id="empty">Список пуст...</li>
+			<li class="item">
+				<div class="item-title">Купить лошадь
+					<button class="item-clear"><img src="img/icon-clear.png" alt="del"></button>
+					<button class="item-hide"><img src="img/icon-arrow.png" alt="hide"></button>
+				</div>
+				<div class="item-dscrpt">По цене 300 т.р. за штуку</div>
+			</li>
+			<li class="item">
+				<div class="item-title">Позвонить маме
+					<button class="item-clear"><img src="img/icon-clear.png" alt="del"></button>
+					<button class="item-hide"><img src="img/icon-arrow.png" alt="hide"></button>
+				</div>
+				<div class="item-dscrpt">Пригласить в кино</div>
+			</li>
+		</ul>
+		</article>
+		<aside>
+			<h3>Добавить новое дело</h3>
+			<form action="add-new" method="post">
+				<p><label for="title">* Название:</label></p>
+				<input type="text" id="title" maxlength="40" required>
+				<p><label for="dscrpt">* Описание:</label></p>
+				<textarea id="dscrpt" maxlength="1000" required></textarea>
+				<input id="add-button" type="submit" value="Добавить дело">
+			</form>
+		</aside>
+	</main>
+</body>
+</html>
