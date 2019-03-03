@@ -29,13 +29,11 @@ article {
 	}
 
 	#empty {
-		/*display: none;*/
 		color: #8993ad;
 		margin-top: 75px;
 	}
 
 	.item {
-		/*display: none;*/
 		width: 470px;
 		background-color: white;
 		padding-top: 15px;
