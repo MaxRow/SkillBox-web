@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Список дел</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<main>
+		<article>
+			<h3>Список дел:</h3>
+			<ul>
+			<li id="empty">Список пуст...</li>
+			</ul>
+		</article>
+		<aside>
+			<h3>Добавить новое дело</h3>
+				<form action="#" method="post" onsubmit="return false">
+				<p><label for="title">* Название:</label></p>
+				<input type="text" id="title" maxlength="40">
+				<p><label for="dscrpt">* Описание:</label></p>
+				<textarea id="dscrpt" maxlength="1000"></textarea>
+				<input id="add-button" type="submit" value="Добавить дело">
+			</form>
+		</aside>
+	</main>
+</body>
+</html>
