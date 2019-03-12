@@ -37,17 +37,19 @@ article {
 		width: 470px;
 		background-color: white;
 		padding-top: 15px;
-		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 
 		.item-title {
-			margin: 0 0 15px 20px;
+			margin-left: 20px;
+			min-height: 35px;
 		}
 
 		.item-clear {
 			margin-left: 15px;
 			background: none;
 			border: none;
+			cursor: pointer;
 		}
 
 		.item-hide {
@@ -55,7 +57,18 @@ article {
 			margin-right: 14px;
 			background: none;
 			border: none;
+			cursor: pointer;
 		}
+
+			.arrow {
+				-moz-transition: transform 150ms;
+  				-webkit-transition: transform 150ms;
+  				transition: transform 150ms;
+			}
+
+			.flip {
+				transform: rotate(90deg);
+			}
 
 		.item-dscrpt {
 			border-top: 1px solid #f7f7f7;
@@ -73,7 +86,7 @@ aside {
 		height: 485px;
 		width: 430px;
 		background-color: white;
-		padding: 50px 0 0 40px;
+		padding: 30px 0 0 40px;
 	}
 
 		p {
@@ -111,4 +124,5 @@ aside {
 			border: none;
 			color: #ffffff;
 			margin-bottom: 35px;
+			cursor: pointer;
 		}

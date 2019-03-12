@@ -1,27 +1,34 @@
 $(function(){
-	function listInspector(){
+	function listCheck(){
 	var list = $('.item').length;
 	if (list != 0) 
 		{
-			$('#empty').css('display','none');
+			$('#empty').hide();
 		}
 	else
 		{
-			$('#empty').removeAttr('display');
+			$('#empty').fadeIn();
 		}
 	}
-	listInspector();
-	/*setInterval(listInspector, 300); - почему нельзя просто заставить код проверять значение постоянно, через n-секунд? Похоже на цикл*/
-
+	listCheck();
+	
 	function listenToAddButton(){
 	$('#add-button').click(function(){
 		var newTaskTitle = $('#title').val();
+			if(!newTaskTitle){
+				alert('Необходимо ввести какое-либо название')
+				return false
+			}
 		var newTaskDiscrpt = $('#dscrpt').val();
-		var newItemTask = '<li class="item"><div class="item-title">'+ newTaskTitle +'<button class="item-clear"><img src="img/icon-clear.png" alt="del"></button><button class="item-hide"><img src="img/icon-arrow.png" alt="hide"></button></div><div class="item-dscrpt">'+ newTaskDiscrpt +'</div></li>';
+			if(!newTaskDiscrpt){
+				alert('Необходимо ввести какое-нибудь описание')
+				return false
+			}
+		var newItemTask = '<li class="item"><div class="item-title">'+ newTaskTitle +'<button class="item-clear"><img src="img/icon-clear.png" alt="del"></button><button class="item-hide"><img class="arrow" src="img/icon-arrow.png" alt="hide"></button></div><div class="item-dscrpt">'+ newTaskDiscrpt +'</div></li>';
 		$('ul').prepend(newItemTask);
 		$('#title').val('');
 		$('#dscrpt').val('');
-		$('#empty').css('display','none');
+		$('#empty').hide();
 		listenToDelButton();
 		listenToHideButton();
 		});
@@ -31,14 +38,16 @@ $(function(){
 	function listenToDelButton(){
 		$('.item-clear').click(function(){
 			$(this).parents('.item').remove();
-			listInspector(); /*почему это не срабатывает? я хочу чтоб по клику запускалась проверка на пустой лист*/
+			listCheck();
 		});
 	};
 
+
 	function listenToHideButton(){
-		$('.item-hide').click(function(){
-			$(this).toggle('.item-dscrpt'); /*уже заценил как эта строка работает? я на этом взоржал и пошел спать. <button> сказала fuckyou и ушла*/
-		});
+		$('.item-hide').off('click').on('click',(function(){
+			$(this).parent().next().slideToggle(150);
+			$(this).children('.arrow').toggleClass('flip');
+		}));
 	};
 });
 
