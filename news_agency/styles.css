@@ -8,7 +8,7 @@ html, body {
 h2 {
 	font-size: 20px;
 	padding: 27px 0 27px 18px;
-	margin: 0 0 34px;
+	margin: 0 0 15px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -24,7 +24,7 @@ h2 {
 }
 
 .fixed-container {
-	width: 1000px;
+	width: 980px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -150,7 +150,7 @@ header {
 	}
 
 main {
-	padding-top: 20px;
+	padding-top: 10px;
 	background-color: #f9f9f9;
 	background-image: url('img/central-bg-top.png');
 	background-repeat: repeat-x;
@@ -168,7 +168,7 @@ main {
 
 	.news-item {
 		padding-left: 18px;
-		margin-bottom: 27px;
+		margin-bottom: 18px;
 		font-size: 14px;
 	}
 
@@ -207,7 +207,7 @@ main {
 	#all-news-butt {
 		width: 177px;
 		height: 45px;
-		margin: 40px auto 25px;
+		margin: 20px auto 20px;
 		border: 1px solid #448ccb;
 		border-radius: 22px;
 		font-size: 14px;
@@ -220,16 +220,44 @@ main {
 		text-decoration: none;
 	}
 
+	#exchange {
+		border-top: 1px solid #e5e5e5;
+		padding-left: 18px;
+	}
+
+		#usd {
+			display: inline-block;
+			width: 40px;
+			overflow: hidden;
+			line-height: 55px;
+			background-image: url(img/icon-usd.png);
+			background-repeat: no-repeat;
+			padding-left: 50px;
+			background-position: 0 35%;
+		}
+
+		#euro {
+			display: inline-block;
+			width: 40px;
+			overflow: hidden;
+			line-height: 55px;
+			margin-left: 10px;
+			background-image: url(img/icon-euro.png);
+			background-repeat: no-repeat;
+			padding-left: 50px;
+			background-position: 0 35%;
+		}
+
 #column-center {
 	width: 462px;
-	margin-left: 20px;
+	margin-left: 10px;
 	float: left;
 }
 
 	#center-top {
 		width: 462px;
 		height: 322px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		background-image: url(img/crimea.png);
 		background-repeat: no-repeat;
 		color: white;
@@ -294,15 +322,15 @@ aside {
 }
 
 aside img {
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 #special-news {
-	padding-bottom: 60px;
+	padding:10px 0 60px 0;
 }
 
 	#special-news-left {
-		width: 588px;
+		width: 568px;
 		height: 393px;
 		float: left;
 		margin: 0;
@@ -325,7 +353,7 @@ aside img {
 				position: relative;
 				top: 145px;
 				margin-left: 20px;
-				padding-right: 185px;
+				padding-right: 175px;
 				font-size: 30px;
 			}
 
@@ -368,7 +396,7 @@ aside img {
 				font-weight: bold;
 				padding-right: 15px;
 				margin-bottom: 20px;
-		}
+			}
 
 footer {
 	background-color: #00122f;
@@ -462,8 +490,8 @@ footer {
 			}
 
 	#copyright {
+		display: block;
 		height: 50px;
-		font-size: 14px;
 		text-align: center;
 		line-height: 50px;
 		border-top: 1px solid #26354e;
